@@ -1,0 +1,19 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/navbar.css'%}"/>
+
+
+
+<div class="main-wrapper-nav">
+
+    <div class="logo-wrapper">
+        <img src="{%static 'images/cvdlogo.png'%}" alt="">
+    </div>
+
+    <div class="nav-btn-wrapper">
+        <a href="{% url 'home' %}" style="text-decoration:none"><div class="home" >Home</div></a>
+        <div style="font-family: 'Lilita One', sans-serif;" class="aboutUs">About us</div>
+    </div>
+
+
+</div>

@@ -1,0 +1,92 @@
+{%extends 'main.html'%}
+<!DOCTYPE html>
+<html lang="en">
+    {%load static%}
+
+{%block content%}
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/fullResult.css'%}"/>
+    <title>{% block title %}Analysis Results | CVD{% endblock %}</title>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="user-input-wrapper">
+           
+            <div class="col1-ui">
+                <h2>User Input</h2>
+
+                <label>Age:</label><p>{{age}}</p><br><br>
+
+                <label>Gender:</label><p>{{gender}}</p><br><br>
+
+                <label>Resting BP:</label><p>{{trestbps}}</p><br><br>
+
+                <label>CVD History:</label><p>{{heart_disease}}</p><br><br>
+            </div>
+
+            <div class="col2-ui">
+                
+                <label>Chest Pain lvl:</label><p>{{cp}}</p><br><br>
+
+                <label>cholesterol:</label><p>{{chol}}</p><br><br>
+
+                <label>Resting BP:</label><p>{{fbs}}</p><br><br>
+
+                <label>Max Heart Rate:</label><p>{{restecg}}</p><br><br>
+
+                <label>thalassemia type:</label><p>{{thal}}</p><br><br>
+            </div>
+        </div>
+
+        <div class="analysis-wrapper">
+            <div class="col1-an">
+                <h2>Linear Regression</h2>
+                <div class="graph-wrapper">
+                    <img class="graph" src="{{ image_linearReg }}" alt="Confusion Matrix Plot">
+
+                </div>
+                <div class="accuracy-wrapper">
+                    <label class="acc-label">Accuracy: </label><p class="acc-result">{{accuracy_linearReg}}%</p><br>
+                    <label class="acc-label">Probability: </label><p class="acc-result">{{linearReg}}%</p>
+                </div>
+            </div>
+
+            <div class="col2-an">
+                <h2>KNN</h2>
+                <div class="graph-wrapper">
+                    <img class="graph" src="{{ image_KNN }}" alt="Confusion Matrix Plot">
+
+                </div>
+                <div class="accuracy-wrapper">
+                    <label class="acc-label">Accuracy: </label><p class="acc-result">{{accuracy_KNN}}%</p><br>
+                    <label class="acc-label">Probability: </label><p class="acc-result">{{KNN_prob}}%</p>
+                    
+                </div>
+            </div>
+
+            <div class="col3-an">
+                <h2>SVM</h2>
+                <div class="graph-wrapper">
+                    <img class="graph" src="{{ image_SVM }}" alt="Confusion Matrix Plot">
+
+                </div>
+                <div class="accuracy-wrapper">
+                    <label class="acc-label">Accuracy: </label><p class="acc-result">{{accuracy_SVM}}%</p><br>
+                    <label class="acc-label">Probability: </label><p class="acc-result">{{SVM_prob}}%</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="options-wrapper">
+            <a style="text-decoration:none" href="{% url 'sample' %}"><div class="print">Print Result</div></a>
+        </div>
+    </div>
+</body>
+{%endblock%}
+</html>

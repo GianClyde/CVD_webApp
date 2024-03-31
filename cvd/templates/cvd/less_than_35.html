@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+{%extends 'main.html'%}
+{%load static%}
+{%block content%}
+<head>
+    <style>
+        .main-wrapper{
+        background-image: url("{%static 'images/lessthan.png'%}");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }    
+    </style>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/less35.css'%}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-wrapper">
+
+        <div class="form">
+            <p>Since the you have a lower risk, we'll need <br>more info to analyze further<br> </p>
+            <form method="POST" action="">
+                {%csrf_token%}
+
+                <label>Cholesterol</label>
+                <input type="text" name="chol" placeholder="chol"/>
+                <label>Fasting Blood Sugar</label>
+                <input type="text" name="fbs" placeholder="Fasting Blood Sugar"/>
+                <label>Resting electrocardiographic results</label>
+                <input type="text" name="restecg" placeholder="Resting electrocardiographic results"/>
+
+                <input type="submit" value="Submit"/>
+                
+            </form>
+        </div>
+
+    </div>
+</body>
+{%endblock%}
+</html>

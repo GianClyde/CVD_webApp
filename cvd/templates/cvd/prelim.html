@@ -1,0 +1,61 @@
+{%extends 'main.html'%}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% block content%}
+<head>
+ 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/prelim.css'%}"/>
+ 
+  <title>{% block title %}Preliminary Entry{% endblock %}</title>
+</head>
+<body>
+
+  <div class="main-wrapper">
+        <div class="doc-wrapper">
+          <img src="{% static 'images/doc.png' %}" class="image">
+        </div>
+
+        <div class="form-wrapper">
+          <div class="form">
+            <form method="POST" action="">
+              {% csrf_token %}
+              <label>Age</label>
+              <input type="text" name="age" placeholder="Age"/>
+              <label>Sex</label>
+              <select class="sex" name="sex">
+                <option value="null"">--</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+              <label>Resting Heart Rate</label>
+              <input type="text" name="restbps" placeholder="Resting heart rate"/>
+              <label>Heart Disease history</label>
+              <select class="sex" name="history">
+                <option value="null"">--</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+              </select>
+              <label>Chest Pain</label>
+              <input type="text" name="cp" placeholder="cp"/>
+              <input class="submit-btn" type="submit" value="Submit"/>
+
+              
+            </form>
+           
+          </div>
+
+        </div>
+  </div>
+
+</body>
+
+{% endblock %}
+</html>

@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@700&family=Merriweather+Sans:wght@500&family=Raleway:wght@500&display=swap" rel="stylesheet">
+<style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+</head>
+<body style="padding: 0; margin: 0; ">
+    <div id="main" style="padding: 0; margin: 0; width: 100vh; ">
+        <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+            CVD Analysis Report
+        <hr>
+         </h1>
+         <p>This analysis was taken {{today}}</p>
+    
+         <table>
+            <tr>
+              <th>Age</th>
+              <th>Gender</th>
+              <th>Resting BP</th>
+              <th>History</th>
+              <th>Resting ECG</th>
+              <th>Chest Pain Type</th>
+              <th>cholesterol</th>
+              <th>Fasting Blood Sugar</th>
+              <th>Resting ECG</th>
+              <th>Max Heart Rate</th>
+              <th>tal</th>
+             
+
+            </tr>
+            <tr>
+                <td>{{age}}</td>
+                <td>{{gender}}</td>
+                <td>{{trestbps}}</td>
+                <td>{{heart_disease}}</td>
+                <td>{{restecg}}</td>
+                <td>{{cp}}</td>
+                <td>{{chol}}</td>
+                <td>{{fbs}}</td>
+                <td>{{restecg}}</td>
+                <td>{{thalac}}</td>
+                <td>{{thal}}</td>
+                
+            </tr>
+            
+          </table>
+
+
+          <div style="border: solid; padding: 10px;">
+            <h2>Chances of CVD using KNN: {{KNN_prob}}%</h2>
+            <h2>Chances of CVD using Linear Regression: {{linearReg}}%</h2>
+            <h2>Chances of CVD using SVM: {{SVM_prob}}%</h2>
+            <h2>Recommendation:<br>{{recommendation}} </h2>
+            
+          </div>
+    </div>
+</body>
+</html>

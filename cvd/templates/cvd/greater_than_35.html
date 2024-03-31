@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+{%extends 'main.html'%}
+{%load static%}
+
+{%block content%}
+<style>
+
+.main-wrapper{
+    background-image: url("{%static 'images/secondary.png'%}");
+    background-repeat: no-repeat;
+    background-size: cover;
+   }    
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/greater35.css'%}"/>
+    <title>{% block title %}Additional Info | CVD{% endblock %}</title>
+</head>
+<body>
+    <div class="main-wrapper">
+        <div class="form">
+            <p class="instruction">Since you have a greter than 35% Chance of heart attack, we'll need more information to asses your condition</p>
+            <br>
+            <form method="POST" action="">
+                {%csrf_token%}
+
+                <label>Cholesterol</label>
+                <input type="text" name="chol" placeholder="chol"/>
+                <label>Fasting Blood Sugar</label>
+                <input type="text" name="fbs" placeholder="Fasting Blood Sugar"/>
+                <label>Resting electrocardiographic results</label>
+                <input type="text" name="restecg" placeholder="Resting electrocardiographic results"/>
+                <label>Maximum heart rate achieved</label>
+                <input type="text" name="thalac" placeholder="Maximum heart rate achieved"/>
+                <label>Thalassemia type (thal)</label>
+                <input type="text" name="thal" placeholder="thal"/>
+
+                <input class="submit-btn" type="submit" value="Submit"/>
+                
+            </form>
+        </div>
+    </div>
+</body>
+{%endblock%}
+</html>

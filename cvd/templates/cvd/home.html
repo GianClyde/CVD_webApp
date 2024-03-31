@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% extends "main.html" %}
+{%load static%}
+<html lang="en">
+
+{%block content%}
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/home.css'%}"/>
+   
+    <title>{% block title %}Home | CVD{% endblock %}</title>
+</head>
+<body>
+    <div class="main-wrapper">
+
+       <div class="text-wrapper">
+            <div class="text">
+                <h1 class="hello">Hello!</h1>
+                <p class="sub-text">
+                    This is  a heart attack predictor,<br>
+                    Do you want to know your chances?
+                </p>
+               
+            </div>
+
+            <div class="btn-wrapper">
+                <a  style="text-decoration:none"  href="{% url 'preliminary-entry'%}"><div class="button">
+                    Start now!
+                </div></a>
+            </div>
+       </div>
+
+       <div class="img-wrapper">
+            <img src="{% static 'images/heart.png' %}" class="image">
+       </div>
+
+    </div>
+    
+</body>
+{%endblock%}
+</html>

@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+.main-wrapper{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    padding: 3%;
+    background-color: #adc1df;
+   }
+
+
+
+.user-input-wrapper{
+    width: 95%;
+    height: 40%;
+    margin: auto;
+    background-color: #7990af;
+    padding: 2%;
+}
+
+.col1-ui{
+    width: 45%;
+    height: 100%;
+    background-color: aliceblue;
+    float: left;
+    padding: 1%;
+}
+
+.col2-ui{
+    width: 45%;
+    height: 100%;
+    background-color: aliceblue;
+    float: right;
+    padding: 1%;
+}
+
+.user-input-wrapper::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+.analysis-wrapper{
+    width: 95%;
+    height: 80%;
+    background-color:#7990af;
+    margin: auto;
+    margin-top: 2%;
+    padding: 2%;
+}
+
+.options-wrapper{
+    width: 95%;
+    height: 20%;
+    margin: auto;
+    padding-top: 5%;
+}
+
+.col1-an{
+    width: 30%;
+    float: left;
+    background-color: white;
+    height: 100%;
+    margin: auto;
+    margin-left: 3%;
+    margin-right: 1%;
+    padding: 1%;
+}
+
+.col2-an{
+    width: 30%;
+    float: left;
+    background-color: white;
+    height: 100%;
+    margin: auto;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 1.5%;
+}
+
+.col3-an{
+    width: 30%;
+    float: left;
+    background-color: white;
+    height: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 1.5%;
+}
+
+.analysis-wrapper::after{
+    clear: both;
+    content: "";
+    display: block;
+}
+
+label{
+    display: inline;
+    margin-top: 50%;
+    font-size: 10px;
+    font-family: 'Lilita One', sans-serif;
+}
+
+.acc-label{
+    display: inline;
+    margin-top: 50%;
+    font-size: 24px;
+    font-family: 'Lilita One', sans-serif;
+}
+
+.acc-result{
+    display: inline;
+    margin-top: 50%;
+    font-size: 24px;
+    font-family: 'Lilita One', sans-serif;
+}
+p{
+    display: inline;
+    margin-bottom: 2%;
+    font-size: 15px;
+    font-family: 'Lilita One', sans-serif;
+}
+
+.graph{
+    width: 100%;
+    height: 100%;
+}
+
+h2{
+    font-family: 'Lilita One', sans-serif;
+
+
+}
+
+.accuracy-wrapper{
+    text-align: center;
+    font-size: 30px;
+}
+
+.graph-wrapper{
+    margin-bottom: 10%;
+    margin-top: 10%;
+}
+
+.print{
+    width: 20%;
+    background-color: white;
+    font-size: 28px;
+    font-family: 'Lilita One', sans-serif;
+    text-align: center;
+    margin: auto;
+    color: #7990af;
+    padding: 1%;
+    border-radius: 5px;
+    
+}
+
+.print:hover{
+    background-color: #7990af;
+    color: white;
+}
